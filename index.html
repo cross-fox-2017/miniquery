@@ -62,7 +62,7 @@
     }
     function demoAjax() {
       AjaxWrapper.request({
-        url: 'http://localhost:3000/',
+        url: 'http://swapi.co/api/people/1/',
         type: 'GET',
         success: function(data) {
           console.log("Success: ", data)
@@ -73,11 +73,13 @@
       })
     }
     function demoMiniQuery() {
-      // miniquery
       miniquery("#eyed").hide()
-      setTimeout(function() {
-        miniquery("#eyed").show()
-      }, 2000)
+      // miniquery
+      // miniquery("#eyed")
+      // miniquery("#eyed").hide()
+      // setTimeout(function() {
+      //   miniquery("#eyed").show()
+      // }, 2000)
     }
     function demoAlias() {
       $("#eyed").hide()
