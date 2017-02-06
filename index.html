@@ -22,7 +22,10 @@
     <h3>Hall of Demos</h3>
 
     <button type="button" name="button-sweet" onclick="demoSweetSelector()">SweetSelector</button>
-    <button type="button" name="button-dom" onclick="demoDOM()">DOM</button>
+    <button type="button" name="button-domHide" onclick="demoDOMHide()">DOMHide</button>
+    <button type="button" name="button-domShow" onclick="demoDOMShow()">DOMShow</button>
+    <button type="button" name="button-domaddClass" onclick="demoDOMAddClass()">DOMaddClass</button>
+    <button type="button" name="button-domremoveClass" onclick="demoDOMRemoveClass()">DOMremoveClass</button>
     <button type="button" name="button-event" onclick="demoEventDispatcher()">EventDispatcher</button>
     <button type="button" name="button-ajax" onclick="demoAjax()">AJAX Request</button>
     <button type="button" name="button-alias" onclick="demoMiniQuery()">Namespace miniquery</button>
@@ -53,10 +56,16 @@
       console.log(SweetSelector.select('a'))
     }
 
-    function demoDOM() {
+    function demoDOMHide() {
       DOM.hide('.klass')
+    }
+    function demoDOMShow() {
       DOM.show('.klass')
+    }
+    function demoDOMAddClass() {
       DOM.addClass('.klass', 'shaded')
+    }
+    function demoDOMRemoveClass() {
       DOM.removeClass('.klass', 'shaded')
     }
 
