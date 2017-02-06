@@ -22,7 +22,10 @@
     <h3>Hall of Demos</h3>
 
     <button type="button" name="button-sweet" onclick="demoSweetSelector()">SweetSelector</button>
-    <button type="button" name="button-dom" onclick="demoDOM()">DOM</button>
+    <button type="button" name="button-dom" onclick="demoDOMhide()">DOMhide</button>
+    <button type="button" name="button-dom" onclick="demoDOMshow()">DOMshow</button>
+    <button type="button" name="button-dom" onclick="demoDOMadd()">DOMadd</button>
+    <button type="button" name="button-dom" onclick="demoDOMremove()">DOMremove</button>
     <button type="button" name="button-event" onclick="demoEventDispatcher()">EventDispatcher</button>
     <button type="button" name="button-ajax" onclick="demoAjax()">AJAX Request</button>
     <button type="button" name="button-alias" onclick="demoMiniQuery()">Namespace miniquery</button>
@@ -53,12 +56,20 @@
       console.log(SweetSelector.select('a'))
     }
 
-    function demoDOM() {
+    function demoDOMhide() {
       DOM.hide('.klass')
+    }
+    function demoDOMshow() {
       DOM.show('.klass')
+    }
+    function demoDOMremove() {
       DOM.removeClass('.klass', 'shaded')
+    }
+    function demoDOMadd() {
       DOM.addClass('.klass', 'shaded')
     }
+    //
+    //
 
     function demoEventDispatcher() {
       EventDispatcher.on('.klass', 'click', function() {
@@ -68,7 +79,7 @@
 
     function demoAjax() {
       AjaxWrapper.request({
-        url: 'http://localhost:3000/',
+        url: 'http://swapi.co/api/people/1/',
         type: 'GET',
         success: function(data) {
           console.log("Success: ", data)
