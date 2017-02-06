@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>miniquery</title>
+    <title>miniquery belajar</title>
     <style media="screen">
       .container {
         font-size: 2em;
@@ -54,9 +54,9 @@
     }
 
     function demoDOM() {
-      DOM.hide('.klass')
-      DOM.show('.klass')
-      DOM.removeClass('.klass', 'shaded')
+      // DOM.hide('.klass')
+      // DOM.show('.klass')
+      // DOM.removeClass('.klass', 'shaded')
       DOM.addClass('.klass', 'shaded')
     }
 
@@ -68,7 +68,7 @@
 
     function demoAjax() {
       AjaxWrapper.request({
-        url: 'http://localhost:3000/',
+        url: 'http://swapi.co/api/films/4',
         type: 'GET',
         success: function(data) {
           console.log("Success: ", data)
