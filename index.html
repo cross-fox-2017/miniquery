@@ -87,6 +87,9 @@
       setTimeout(function() {
         miniquery("#eyed").show()
       }, 2000)
+      miniquery('#eyed').on('#eyed', 'click', function() {
+        console.log("Awesome")
+      })
     }
 
     function demoAlias() {
