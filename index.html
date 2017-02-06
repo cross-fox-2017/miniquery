@@ -39,6 +39,7 @@
       <div class="klass">class: klass 2</div>
     </div>
 
+    <div id="test"></div>
   </body>
 
   <script>
@@ -56,8 +57,8 @@
     function demoDOM() {
       DOM.hide('.klass')
       DOM.show('.klass')
-      DOM.removeClass('.klass', 'shaded')
       DOM.addClass('.klass', 'shaded')
+      DOM.removeClass('.klass', 'shaded')
     }
 
     function demoEventDispatcher() {
@@ -68,10 +69,11 @@
 
     function demoAjax() {
       AjaxWrapper.request({
-        url: 'http://localhost:3000/',
+        url: 'https://restcountries.eu/rest/v1/capital/jakarta',
         type: 'GET',
         success: function(data) {
           console.log("Success: ", data)
+          document.getElementById('test').append(data)
         },
         fail: function() {
           console.log("ERROR")
